@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+/* general rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: 'Press Start 2P', sans-serif;
+}
+button {
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  padding: 10px 10px;
+}
+button:hover {
+  background-color: #ccc;
+}
+/* Variable */
+:root {
+  --primaryFontColor: #eee;
+  --secondaryFontColor: #222;
+  --primaryBackgroundColor: #eee;
+}
+/* Main page */
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  display: block;
+}
+.face div {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.face h3 {
+  color: var(--primaryFontColor);
+  margin: 30px 0px;
+  text-align: center;
+}
+.face button {
+  display: block;
+  margin: 30px auto;
+}
+@media (min-width: 768px) {
+  .face h3 {
+    font-size: 40px;
+  }
+  .face button {
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .face h3 {
+    font-size: 45px;
+  }
+  .face button {
+    font-size: 35px;
+  }
+}
+/* Game page */
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondaryFontColor);
+  overflow: hidden;
+  display: none;
+}
+.back header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.back header p {
+  color: var(--primaryFontColor);
+  font-size: 13px;
+}
+.back > p {
+  color: var(--primaryFontColor);
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  margin: 0px 0px 30px;
+}
+.back .line {
+  position: relative;
+  margin: 10px 0px;
+}
+.back .line::after {
+  content: '';
+  width: 100%;
+  height: 7px;
+  position: absolute;
+  background-color: var(--primaryBackgroundColor);
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+.back .line span {
+  padding: 7px;
+  font-size: 25px;
+  color: var(--secondaryFontColor);
+  background-color: var(--primaryBackgroundColor);
+  position: relative;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: fit-content;
+}
+.back .section .left-section,
+.back .section .right-section {
+  margin: 20px auto;
+  text-align: center;
+}
+.back .section .left-section .slider {
+  background-color: inherit;
+  border-color: var(--primaryBackgroundColor);
+  border-width: 5px;
+  color: var(--primaryFontColor);
+  margin: 20px auto;
+  width: 200px;
+  height: 75px;
+  display: block;
+  outline: none;
+  text-align: center;
+  font-size: 35px;
+}
+.back .section .left-section button {
+  padding: 15px 20px;
+  margin: 0px 0px 20px;
+}
+.back .section .right-section {
+  color: var(--primaryFontColor);
+}
+.back .section .right-section .Message {
+  font-size: 13px;
+}
+.back .section .right-section p {
+  margin: 20px 0px;
+}
+@media (min-width: 768px) {
+  .back header button,
+  .back .section .left-section button {
+    font-size: 15px;
+  }
+  .back > p {
+    font-size: 30px;
+    margin: -10px 0px 40px;
+  }
+  .back .section {
+    display: flex;
+  }
+  .back .section .right-section,
+  .back .section .left-section {
+    width: 50%;
+    height: 100%;
+    margin-top: 40px;
+  }
+  .back .section .right-section {
+    text-align: left;
+  }
+  .back .section .right-section p {
+    margin: 40px 0px;
+    font-size: 20px;
+  }
+  .back .section .left-section .slider {
+    width: 260px;
+    height: 120px;
+    font-size: 45px;
+  }
+}
+@media (min-width: 992px) {
+  .back header {
+    padding: 20px;
+  }
+  .back button {
+    font-size: 15px;
+    padding: 10px 15px;
+  }
+  .back > p {
+    font-size: 40px;
+    margin: -10px 0px 30px;
+  }
+  .back .line span {
+    font-size: 40px;
+    padding: 15px 30px;
+  }
+  .back .section .left-section,
+  .back .section .right-section {
+    margin-top: 10px;
+  }
+  .back .section .right-section .Message {
+    font-size: 20px;
+  }
+  .back .section .right-section p {
+    font-size: 25px;
+    margin: 30px 0px;
+  }
+}
