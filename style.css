@@ -15,10 +15,11 @@ body {
   font-family: 'Press Start 2P', sans-serif;
 }
 button {
-  font-size: 15px;
+  font-size: 10px;
   cursor: pointer;
   border: none;
-  padding: 10px 10px;
+  margin: 0px auto 5px;
+  padding: 5px 5px;
 }
 button:hover {
   background-color: #ccc;
@@ -85,7 +86,7 @@ button:hover {
 }
 .back header p {
   color: var(--primaryFontColor);
-  font-size: 13px;
+  font-size: 8px;
 }
 .back > p {
   color: var(--primaryFontColor);
